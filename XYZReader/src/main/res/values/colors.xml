@@ -16,8 +16,18 @@
 -->
 
 <resources>
-    <color name="photo_placeholder">#ccc</color>
 
+    <!-- Material color palette -->
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimaryDark">#E64A19</color>
+    <color name="colorAccent">#4CAF50</color>
+    <color name="colorLightPrimary">#FFCCBC</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorDivider">#B6B6B6</color>
+
+    <!-- TODO: Remove -->
+    <color name="photo_placeholder">#ccc</color>
     <color name="theme_primary">#04561A</color>
     <color name="theme_primary_dark">#04561A</color>
     <color name="theme_accent">#04561A</color>

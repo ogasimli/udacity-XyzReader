@@ -8,5 +8,9 @@
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
     <dimen name="recycler_view_padding">4dp</dimen>
+    <dimen name="toolbar_elevation">8dp</dimen>
+    <dimen name="card_view_elevation">4dp</dimen>
+    <dimen name="card_view_corner_radius">9dp</dimen>
+    <dimen name="thumbnail_height">150dp</dimen>
 
 </resources>

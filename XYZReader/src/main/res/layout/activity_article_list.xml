@@ -31,8 +31,9 @@
             android:background="?colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-            
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="@dimen/toolbar_elevation">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

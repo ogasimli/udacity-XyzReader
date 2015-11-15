@@ -26,6 +26,9 @@
     <color name="colorSecondaryText">#727272</color>
     <color name="colorDivider">#B6B6B6</color>
 
+    <color name="color_title_inverse">#DEFFFFFF</color>
+    <color name="color_subtitle_inverse">#8AFFFFFF</color>
+
     <!-- TODO: Remove -->
     <color name="photo_placeholder">#ccc</color>
     <color name="theme_primary">#04561A</color>

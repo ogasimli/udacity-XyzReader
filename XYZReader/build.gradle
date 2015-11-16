@@ -40,6 +40,6 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.6.1'
     compile 'com.github.florent37:glidepalette:1.0.2@aar'
 
-    compile 'com.squareup.okhttp:okhttp:1.1.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile files('libs/volley.jar')
 }

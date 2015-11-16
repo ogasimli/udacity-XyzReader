@@ -43,7 +43,7 @@
                 android:ellipsize="end"
                 android:maxLines="4"
                 android:textColor="@color/color_title_inverse"
-                tools:text="1. Dolor ipsum sit amet"/>
+                tools:text="@string/placeholder_article_title"/>
 
             <TextView
                 android:id="@+id/article_subtitle"
@@ -57,7 +57,7 @@
                 android:singleLine="true"
                 android:ellipsize="end"
                 android:textColor="@color/color_subtitle_inverse"
-                tools:text="21.12.2012 by Isaac Newton"/>
+                tools:text="@string/placeholder_article_subtitle"/>
 
         </LinearLayout>
 

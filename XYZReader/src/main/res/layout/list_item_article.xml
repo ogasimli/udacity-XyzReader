@@ -22,7 +22,6 @@
             android:background="@color/photo_placeholder"
             android:contentDescription="@string/thumbnail_content_description"
             android:scaleType="centerCrop"
-            android:transitionName="poster"
             tools:src="@drawable/placeholder_article_photo"/>
 
         <LinearLayout

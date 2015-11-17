@@ -28,6 +28,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.ListTheme" parent="AppTheme"/>
     <style name="AppTheme.DetailsTheme" parent="AppTheme"/>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>

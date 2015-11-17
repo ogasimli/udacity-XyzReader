@@ -29,11 +29,11 @@ import butterknife.ButterKnife;
 public final class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ArticleHolder> {
 
     public interface OnArticleItemClickListener {
-        void onArticleSelected(View view, long articleId);
+        void onArticleSelected(long articleId);
 
         OnArticleItemClickListener DUMMY = new OnArticleItemClickListener() {
             @Override
-            public void onArticleSelected(View view, long articleId) {
+            public void onArticleSelected(long articleId) {
             }
         };
     }
@@ -103,7 +103,7 @@ public final class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mListener.onArticleSelected(thumbnailView, getItemId());
+                    mListener.onArticleSelected(getItemId());
                 }
             });
         }

@@ -22,7 +22,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Window;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -42,10 +41,6 @@ public class ArticleListActivity extends AppCompatActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Set Window.FEATURE_ACTIVITY_TRANSITIONSin order to enable transition effect
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
-        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
@@ -123,14 +118,14 @@ public class ArticleListActivity extends AppCompatActivity implements
         mRecyclerView.setAdapter(null);
     }
 
+    @SuppressWarnings("unchecked")
     @Override
-    public void onArticleSelected(View view, long articleId) {
+    public void onArticleSelected(long articleId) {
         Intent intent = new Intent(this, ArticleDetailActivity.class);
         intent.putExtra(ArticleDetailFragment.ARG_ITEM_ID,articleId);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(this, view, view
-                    .getTransitionName()).toBundle();
+            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
             startActivity(intent, bundle);
         } else {
             startActivity(intent);

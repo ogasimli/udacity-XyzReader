@@ -11,6 +11,7 @@
     <dimen name="recycler_view_padding">4dp</dimen>
     <dimen name="card_view_corner_radius">9dp</dimen>
     <dimen name="thumbnail_height">150dp</dimen>
-    <dimen name="nested_scroll_view_margin_buttom">88dp</dimen>
+    <dimen name="nested_scroll_view_margin_buttom">80dp</dimen>
+    <dimen name="details_activity_appbar_height">300dp</dimen>
 
 </resources>

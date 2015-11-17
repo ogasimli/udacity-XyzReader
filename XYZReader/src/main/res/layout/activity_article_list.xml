@@ -30,8 +30,8 @@
             android:layout_height="?actionBarSize"
             android:background="?colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
             <ImageView
                 android:layout_width="wrap_content"

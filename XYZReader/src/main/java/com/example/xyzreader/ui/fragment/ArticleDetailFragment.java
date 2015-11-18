@@ -15,8 +15,10 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
@@ -58,6 +60,8 @@ public class ArticleDetailFragment extends Fragment implements
     TextView mSubtitle;
     @Bind(R.id.photo)
     ImageView mPhotoView;
+    @Bind(R.id.share_fab)
+    FloatingActionButton mShareFab;
 
     private Cursor mCursor;
     private long mItemId;
@@ -105,33 +109,41 @@ public class ArticleDetailFragment extends Fragment implements
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
 
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
         ButterKnife.bind(this, mRootView);
 
-        mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
-
-        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
+        mShareFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                    AnimatedVectorDrawable fabRotation = (AnimatedVectorDrawable) getActivity().
+                            getDrawable(R.drawable.fab_anim_vector_drawable);
+                    mShareFab.setImageDrawable(fabRotation);
+                    if (fabRotation != null) {
+                        fabRotation.start();
+                    }
+                }
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
                         .setType("text/plain")
                         .setText("Some sample text")
                         .getIntent(), getString(R.string.action_share)));
+                }
             }
-        });
+        );
 
-        bindViews();
-        return mRootView;
-    }
+            bindViews();
 
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        initToolbar();
-        initCollapsingToolbar();
-    }
+            return mRootView;
+        }
+
+        @Override
+        public void onViewCreated (View view, Bundle savedInstanceState){
+            super.onViewCreated(view, savedInstanceState);
+            initToolbar();
+            initCollapsingToolbar();
+        }
 
     private void bindViews() {
         if (mRootView == null) {

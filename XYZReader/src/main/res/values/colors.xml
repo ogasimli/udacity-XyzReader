@@ -31,7 +31,7 @@
     <color name="color_subtitle_inverse">#8AFFFFFF</color>
 
     <!-- Colors for SwipeRefreshLayout -->
-    <array name="swipe_progress_colors">
+    <array name="swipe_refresh_layout_colors">
         <item>@color/colorPrimary</item>
         <item>@color/colorAccent</item>
     </array>

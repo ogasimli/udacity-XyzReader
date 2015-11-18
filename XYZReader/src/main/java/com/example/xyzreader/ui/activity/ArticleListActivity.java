@@ -55,7 +55,7 @@ public class ArticleListActivity extends AppCompatActivity implements
 
         mSwipeRefreshLayout.setOnRefreshListener(this);
         mSwipeRefreshLayout.setColorSchemeColors(
-                getResources().getIntArray(R.array.swipe_progress_colors));
+                getResources().getIntArray(R.array.swipe_refresh_layout_colors));
 
         getLoaderManager().initLoader(0, null, this);
 
@@ -67,7 +67,6 @@ public class ArticleListActivity extends AppCompatActivity implements
     @Override
     public void onRefresh() {
         startService(new Intent(this, UpdaterService.class));
-
     }
 
     @Override

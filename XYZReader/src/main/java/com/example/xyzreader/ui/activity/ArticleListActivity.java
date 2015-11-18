@@ -32,7 +32,8 @@ import butterknife.ButterKnife;
  * activity presents a grid of items as cards.
  */
 public class ArticleListActivity extends AppCompatActivity implements
-        LoaderManager.LoaderCallbacks<Cursor>, ArticlesAdapter.OnArticleItemClickListener {
+        LoaderManager.LoaderCallbacks<Cursor>, ArticlesAdapter.OnArticleItemClickListener,
+        SwipeRefreshLayout.OnRefreshListener {
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
@@ -40,6 +41,8 @@ public class ArticleListActivity extends AppCompatActivity implements
     SwipeRefreshLayout mSwipeRefreshLayout;
     @Bind(R.id.recycler_view)
     RecyclerView mRecyclerView;
+
+    private boolean mIsRefreshing = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +52,22 @@ public class ArticleListActivity extends AppCompatActivity implements
         ButterKnife.bind(this);
 
         initToolbar();
+
+        mSwipeRefreshLayout.setOnRefreshListener(this);
+        mSwipeRefreshLayout.setColorSchemeColors(
+                getResources().getIntArray(R.array.swipe_progress_colors));
+
         getLoaderManager().initLoader(0, null, this);
 
         if (savedInstanceState == null) {
-            refresh();
+            onRefresh();
         }
     }
 
-    private void refresh() {
+    @Override
+    public void onRefresh() {
         startService(new Intent(this, UpdaterService.class));
+
     }
 
     @Override
@@ -72,8 +82,6 @@ public class ArticleListActivity extends AppCompatActivity implements
         super.onStop();
         unregisterReceiver(mRefreshingReceiver);
     }
-
-    private boolean mIsRefreshing = false;
 
     private final BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
         @Override

@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/content_padding"
                 android:textColor="@color/colorPrimaryText"
-                android:textColorLink="@color/theme_accent"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="@dimen/detail_body_text_size"
                 android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                 tools:text="@string/placeholder_article_body"/>

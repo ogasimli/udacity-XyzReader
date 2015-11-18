@@ -14,7 +14,6 @@ import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -31,6 +30,7 @@ public class ArticleDetailActivity extends AppCompatActivity
 
     @Bind(R.id.pager)
     ViewPager mPager;
+
     private MyPagerAdapter mPagerAdapter;
 
     @Override
@@ -122,11 +122,6 @@ public class ArticleDetailActivity extends AppCompatActivity
     private class MyPagerAdapter extends FragmentStatePagerAdapter {
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
-        }
-
-        @Override
-        public void setPrimaryItem(ViewGroup container, int position, Object object) {
-            super.setPrimaryItem(container, position, object);
         }
 
         @Override

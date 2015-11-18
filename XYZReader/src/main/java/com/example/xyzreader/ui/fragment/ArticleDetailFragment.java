@@ -172,7 +172,7 @@ public class ArticleDetailFragment extends Fragment implements
             Log.d("Photo URL: ", photoUrl);
             Glide.with(mPhotoView.getContext())
                     .load(photoUrl)
-                    .placeholder(R.color.photo_placeholder)
+                    .placeholder(R.color.colorLightPrimary)
                     .listener(GlidePalette.with(photoUrl).intoCallBack(new BitmapPalette.CallBack() {
                         @Override
                         public void onPaletteLoaded(Palette palette) {

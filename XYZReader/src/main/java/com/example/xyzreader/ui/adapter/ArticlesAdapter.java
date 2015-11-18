@@ -42,7 +42,7 @@ public final class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.
     private final LayoutInflater mInflater;
 
     private OnArticleItemClickListener mListener = OnArticleItemClickListener.DUMMY;
-    private Cursor mCursor;
+    private final Cursor mCursor;
 
     public ArticlesAdapter(Activity activity, Cursor cursor) {
         mInflater = LayoutInflater.from(activity);
@@ -129,7 +129,7 @@ public final class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.
             Glide.with(thumbnailView.getContext())
                     .load(imageUrl)
                     .crossFade()
-                    .placeholder(R.color.photo_placeholder)
+                    .placeholder(R.color.colorLightPrimary)
                     .listener(GlidePalette.with(imageUrl).intoCallBack(new BitmapPalette.CallBack() {
                         @Override
                         public void onPaletteLoaded(Palette palette) {

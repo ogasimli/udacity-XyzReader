@@ -19,7 +19,7 @@
             android:id="@+id/thumbnail"
             android:layout_width="match_parent"
             android:layout_height="@dimen/thumbnail_height"
-            android:background="@color/photo_placeholder"
+            android:background="@color/colorLightPrimary"
             android:contentDescription="@string/thumbnail_content_description"
             android:scaleType="centerCrop"
             tools:src="@drawable/placeholder_article_photo"/>

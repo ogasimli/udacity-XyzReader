@@ -6,6 +6,7 @@ import android.widget.ImageView;
 
 public class ThreeTwoImageView extends ImageView {
 
+    //TODO: Delete class
     public ThreeTwoImageView(Context context) {
         super(context);
     }

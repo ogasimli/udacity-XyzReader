@@ -117,6 +117,7 @@ public class ArticleDetailFragment extends Fragment implements
         mShareFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //TODO: Fix animation
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                     AnimatedVectorDrawable fabRotation = (AnimatedVectorDrawable) getActivity().
                             getDrawable(R.drawable.fab_anim_vector_drawable);

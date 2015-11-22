@@ -7,7 +7,9 @@
 
     <style name="AppTheme.DetailsTheme" parent="AppTheme">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+<!--
         <item name="android:statusBarColor">@android:color/transparent</item>
+-->
         <item name="android:windowEnterTransition">@android:transition/fade</item>
     </style>
 </resources>

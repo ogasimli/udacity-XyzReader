@@ -131,7 +131,7 @@ public class ArticleListActivity extends AppCompatActivity implements
     @Override
     public void onArticleSelected(long articleId) {
         Intent intent = new Intent(this, ArticleDetailActivity.class);
-        intent.putExtra(ArticleDetailFragment.ARG_ITEM_ID,articleId);
+        intent.putExtra(ArticleDetailFragment.ARG_ITEM_ID, articleId);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();

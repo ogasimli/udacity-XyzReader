@@ -70,7 +70,7 @@ public class ArticleDetailActivity extends AppCompatActivity
             if (extras != null) {
                 mStartId = extras.getLong(ArticleDetailFragment.ARG_ITEM_ID);
                 mSelectedItemId = mStartId;
-            }else {
+            } else {
                 throw new NullPointerException("No article ID found in extras");
             }
         }

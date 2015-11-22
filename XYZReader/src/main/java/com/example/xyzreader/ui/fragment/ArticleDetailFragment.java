@@ -129,21 +129,20 @@ public class ArticleDetailFragment extends Fragment implements
                         .setType("text/plain")
                         .setText("Some sample text")
                         .getIntent(), getString(R.string.action_share)));
-                }
             }
-        );
+        });
 
-            bindViews();
+        bindViews();
 
-            return mRootView;
-        }
+        return mRootView;
+    }
 
-        @Override
-        public void onViewCreated (View view, Bundle savedInstanceState){
-            super.onViewCreated(view, savedInstanceState);
-            initToolbar();
-            initCollapsingToolbar();
-        }
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initToolbar();
+        initCollapsingToolbar();
+    }
 
     private void bindViews() {
         if (mRootView == null) {

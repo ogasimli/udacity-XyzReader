@@ -14,13 +14,21 @@ The main objective of the project was to redesign an app to follow the Material 
 
 This project gave me an opportunity to improve an app’s design, a vital skill for building apps users will love. It also replicated a common developer task of updating and changing an app's design as new standards are released.
 
-## What I Have Learned?
+## Screenshots
 
-Through this project, I:
-* Learned the fundamentals of Android design
-* Applied Material Design guidelines
-* Separated an interface into surfaces.
-* Effectively used transitions and motion
+Before:
+
+![screen](screenshots/activity_main.png)
+
+![screen](screenshots/activity_detail.png)
+
+## Libraries Used
+
+* [ButterKnife](https://github.com/JakeWharton/butterknife)
+* [Glide](https://github.com/bumptech/glide)
+* [Glide Palette](https://github.com/florent37/GlidePalette)
+* [OkHttp](https://github.com/square/okhttp)
+* [Android Design Support](http://android-developers.blogspot.com/2015/05/android-design-support-library.html)
 
 ## Android Developer Nanodegree
 [![udacity][1]][2]

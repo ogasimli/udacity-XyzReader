@@ -6,9 +6,9 @@ XYZ Reader was evaluated and graded as "Meets Specifications" (the highest grade
 ## Project Overview
 
 The main objective of the project was to redesign an app to follow the Material Design guidelines and translate a set of static design mocks to a living and breathing app. This involved followings:
-* Apply Material Design guidelines
-* Separate an interface into surfaces
-* Effectively use transitions and motion
+* Application of Material Design guidelines
+* Separation of an interface into surfaces
+* Effective use of transitions and motion
 
 ## Why this Project?
 
